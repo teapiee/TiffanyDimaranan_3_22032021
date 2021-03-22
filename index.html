@@ -6,26 +6,25 @@
 		<title> ohmyfood </title>
 		<meta name="viewport" content="width=device-width initial-scale= 1">
 		<script src="https://kit.fontawesome.com/1c3ce562ad.js" crossorigin="anonymous"></script>
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="stylesheet.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet">	
+		<link rel="stylesheet" href="css/stylesheet.css"/>
     </head>
 
 	<body>
-		<header>
+		<header class="header">
 			<div class="header__logo">
 				<p>ohmyfood</p>
 			</div>
 			<div class="header__location">
 				<i class="fas fa-map-marker-alt"></i>
-				<p class="location__texte">Paris, Belleville</p>
+				<p class="header__location__texte">Paris, Belleville</p>
 			</div>
 		</header>
 
 		<!--top section-->
 		<section class="intro">
 			<h1 class="intro__header">Réservez le menu qui vous convient</h1>
-			<p class="intro__par">Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
+			<p class= "intro__texte">Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
 			<div class="intro__btn">Explorer nos restaurants</div>
 		</section>
 
@@ -33,10 +32,22 @@
 		<!--mid section-->
 		<section class="mid">
 			<h1 class="mid__header">Fonctionnement</h1>
-			<div class="mid__ctr__steps">
-				<div class="steps">Choisissez un restaurant</div>
-				<div class="steps">Composez votre menu</div>
-				<div class="steps">Dégustez au restaurant</div>
+			<div class="mid__ctr">
+				<div class="mid__ctr__step">
+					<p>1</p>
+					<i class="fas fa-mobile-alt"></i>
+					<p>Choisissez un restaurant</p>
+				</div>
+				<div class="mid__ctr__step">
+					<p>2</p>
+					<i class="fas fa-list-ul"></i>
+					<p>Composez votre menu</p>
+				</div>
+				<div class="mid__ctr__step">
+					<p>3</p>
+					<i class="fas fa-store"></i>
+					<p>Dégustez au restaurant</p>
+				</div>
 			</div>
 		</section>
 			

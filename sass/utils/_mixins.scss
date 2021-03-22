@@ -1,0 +1,14 @@
+@mixin flexCenter{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin fontIntro ($family,$weight,$size) {
+    font-family:$family;
+    font-weight:$weight;
+    font-size:$size;
+}
+@mixin measure ($width, $height) {
+    width:$width;
+    height:$height;
+}
