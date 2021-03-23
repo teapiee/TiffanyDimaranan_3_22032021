@@ -68,7 +68,7 @@
         @include flexAlign(flex,column,space-around,center);
         &__step{
             @include flexAlign (flex,row,flex-start,center);
-            @include measure(85%, 25%);
+            @include measure(90%, 25%);
             border-radius:1.5rem;
             background-color: $color-quaternary;
             box-shadow:3px 5px 10px #dad8d8; 
@@ -83,7 +83,7 @@
             margin-left:-3%;
             padding:0.2rem;
             &:hover{ /*not working*/
-                background:lighten($color-primary,10);
+                background-image:lighten($color-primary,10);
             }
         }
         i{
@@ -98,25 +98,63 @@
 }
 
 .lower{
-    @include measure(100%,1000px);
+    @include measure(100%,1300px);
     @include flexAlign(flex,column,space-around,none);
     background-color:$color-quaternary;
     margin-top: 20%;
     &__header{
-        @include measure(60%,4%);
-        @include fontIntro(family(normal),weight(bold),1.8rem);
+        @include measure(60%,3%);
+        @include fontIntro(family(normal),weight(bold),1.7rem);
+        margin-top:10%;
         margin-left:2%;
-        border:1px solid gray;
     }
     &__ctr__menu{
         @include measure(100%,90%);
         @include flexAlign(flex,column,space-around,center);
-        border:1px solid gray;
+        margin-top:-10%;
+    }
+    a{
+        text-decoration:none;
     }
     .menu{
         @include measure(90%,23%);
         @include flexAlign(flex,column,none,none);
-        border:1px solid gray;
         border-radius:1rem;
+        background-color: white;
+        box-shadow:3px 5px 6px #dad8d8;
+        &__image{
+            @include measure(100%,65%);
+            object-fit: cover;
+            border-radius:1rem 1rem 0rem 0rem;
+        }
+        &__choix{
+            @include measure(100%,35%);
+            @include flexAlign(flex,row,space-between,none);
+            &__texte{
+                @include measure(60%,100%);
+                @include flexAlign(flex,column,space-around,none);
+                margin-left:4%;
+            }
+            &__coeur{
+                @include measure(25%,90%);
+                @include flexCenter;
+            }
+            .nom{
+                @include fontIntro(family(normal),weight(bold),1.2rem); 
+                color:black;
+            }
+            .endroit{
+                @include fontIntro(family(normal),weight(regular),1.1rem);
+                color:black;
+                margin-top:-10%;
+            }
+            i{
+                font-size:1.5rem;
+                color:black;
+                &:hover{
+                    color:linear-gradient($color-primary,$color-secondary);
+                }
+            }
+        }
     }
 }
