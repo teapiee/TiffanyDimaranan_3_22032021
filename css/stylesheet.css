@@ -86,6 +86,7 @@
   font-size: 1.6rem;
   width: 70%;
   height: 10%;
+  margin-left: 4%;
 }
 .mid__ctr {
   width: 100%;
@@ -151,9 +152,9 @@
   height: 3%;
   font-family: "Roboto";
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin-top: 10%;
-  margin-left: 2%;
+  margin-left: 5%;
 }
 .lower__ctr__menu {
   width: 100%;
@@ -226,7 +227,65 @@
   color: black;
 }
 .lower .menu__choix i:hover {
+  /*not working*/
   color: linear-gradient(#9356dc, #ff79da);
+}
+
+.footer {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: none;
+  background-color: #353131;
+  margin-top: 10%;
+}
+.footer__header {
+  width: 50%;
+  height: 10%;
+  font-family: "Shrikhand";
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 8%;
+  margin-top: 8%;
+}
+.footer__ctr {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  margin-left: 5%;
+}
+.footer__ctr__texteicon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: none;
+  margin-bottom: -6%;
+}
+.footer__ctr__texte {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  margin-left: 5%;
+  margin-bottom: -1%;
+}
+.footer__ctr i {
+  font-size: 0.9rem;
+  color: white;
+  margin-left: 5%;
+  margin-top: 8%;
+}
+.footer__ctr .texteicon {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  margin-left: 5%;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

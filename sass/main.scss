@@ -18,7 +18,7 @@
     &__location{
         @include measure(100%, 50%);
         @include flexCenter;
-        @include fontIntro(family(normal),weight(medium),1rem);
+        @include fontStyle(family(normal),weight(medium),1rem);
         background-color:#ededed;
         &__texte{
             margin-left:1rem;
@@ -28,28 +28,27 @@
 
 .intro{
     @include measure(100%, 330px);
-    @include flexAlign(flex,column,none,center);
+    @include flexBox(flex,column,none,center);
     background-color:$color-quaternary;
     padding-bottom:5%;
     &__header{
         @include measure(80%, 27%);
-        @include fontIntro(family(normal),weight(bold),1.7rem);
+        @include fontStyle(family(normal),weight(bold),1.7rem);
         @include flexCenter;
         text-align: center;
     }
     &__texte{
         height:18%;
-        @include fontIntro(family(normal),weight(regular),1.2rem);
+        @include fontStyle(family(normal),weight(regular),1.2rem);
         text-align: center;
         margin-top:-5%;
     }
     &__btn{
         @include measure(70%, 16%);
-        @include fontIntro(family(normal),weight(medium),1.1rem);
+        @include fontStyle(family(normal),weight(medium),1.1rem);
         @include flexCenter;
         background-image:linear-gradient($color-secondary,$color-primary);
         color:white;
-        
         border-radius:2rem;
     }
 }
@@ -60,14 +59,15 @@
     flex-direction: column;
     margin-top:13%;
     &__header{
-        @include fontIntro(family(normal),weight(bold),1.6rem);
+        @include fontStyle(family(normal),weight(bold),1.6rem);
         @include measure(70%, 10%);
+        margin-left:4%;
     }
     &__ctr{
         @include measure(100%, 90%);
-        @include flexAlign(flex,column,space-around,center);
+        @include flexBox(flex,column,space-around,center);
         &__step{
-            @include flexAlign (flex,row,flex-start,center);
+            @include flexBox(flex,row,flex-start,center);
             @include measure(90%, 25%);
             border-radius:1.5rem;
             background-color: $color-quaternary;
@@ -76,7 +76,7 @@
         .step__num{
             @include measure(1.2rem,1.2rem);
             @include flexCenter;
-            @include fontIntro(family(normal),weight(medium),0.8rem);
+            @include fontStyle(family(normal),weight(medium),0.8rem);
             color:white;
             background-color:$color-primary;
             border-radius:2rem;
@@ -91,7 +91,7 @@
             margin-left:6%;
         }
         .step__texte{
-            @include fontIntro(family(normal),weight(bold),1rem);
+            @include fontStyle(family(normal),weight(bold),1rem);
             margin-left:10%;
         }
     }
@@ -99,18 +99,18 @@
 
 .lower{
     @include measure(100%,1300px);
-    @include flexAlign(flex,column,space-around,none);
+    @include flexBox(flex,column,space-around,none);
     background-color:$color-quaternary;
     margin-top: 20%;
     &__header{
         @include measure(60%,3%);
-        @include fontIntro(family(normal),weight(bold),1.7rem);
+        @include fontStyle(family(normal),weight(bold),1.5rem);
         margin-top:10%;
-        margin-left:2%;
+        margin-left:5%;
     }
     &__ctr__menu{
         @include measure(100%,90%);
-        @include flexAlign(flex,column,space-around,center);
+        @include flexBox(flex,column,space-around,center);
         margin-top:-10%;
     }
     a{
@@ -118,7 +118,7 @@
     }
     .menu{
         @include measure(90%,23%);
-        @include flexAlign(flex,column,none,none);
+        @include flexBox(flex,column,none,none);
         border-radius:1rem;
         background-color: white;
         box-shadow:3px 5px 6px #dad8d8;
@@ -129,10 +129,10 @@
         }
         &__choix{
             @include measure(100%,35%);
-            @include flexAlign(flex,row,space-between,none);
+            @include flexBox(flex,row,space-between,none);
             &__texte{
                 @include measure(60%,100%);
-                @include flexAlign(flex,column,space-around,none);
+                @include flexBox(flex,column,space-around,none);
                 margin-left:4%;
             }
             &__coeur{
@@ -140,21 +140,62 @@
                 @include flexCenter;
             }
             .nom{
-                @include fontIntro(family(normal),weight(bold),1.2rem); 
+                @include fontStyle(family(normal),weight(bold),1.2rem); 
                 color:black;
             }
             .endroit{
-                @include fontIntro(family(normal),weight(regular),1.1rem);
+                @include fontStyle(family(normal),weight(regular),1.1rem);
                 color:black;
                 margin-top:-10%;
             }
             i{
                 font-size:1.5rem;
                 color:black;
-                &:hover{
+                &:hover{ /*not working*/
                     color:linear-gradient($color-primary,$color-secondary);
                 }
             }
+        }
+    }
+}
+
+.footer{
+    @include measure(100%,250px);
+    @include flexBox(flex,column,space-around,none);
+    background-color:rgb(53, 49, 49);
+    margin-top: 10%;
+    &__header{
+        @include measure(50%,10%);
+        @include fontStyle(family(special),weight(none),1.2rem);
+        color:white;
+        margin-left:8%;
+        margin-top:8%;
+    }
+    &__ctr{
+        @include measure(70%,90%);
+        @include flexBox(flex,column,none,none);
+        margin-left:5%;
+        &__texteicon{
+            @include flexBox(flex,row,space,none);
+            margin-bottom:-6%;
+
+        }
+        &__texte{
+            @include fontStyle(family(normal),weight(regular),1rem);
+            color:white;
+            margin-left:5%;
+            margin-bottom:-1%;
+        }
+        i{
+            font-size:0.9rem;
+            color:white;
+            margin-left:5%;
+            margin-top:8%;
+        }
+        .texteicon{
+            @include fontStyle(family(normal),weight(bold),1rem);
+            color:white;
+            margin-left:5%;
         }
     }
 }
