@@ -4,6 +4,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: none;
+}
+@media screen and (min-width: 700px) {
+  .header {
+    height: 140px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header {
+    height: 160px;
+  }
 }
 .header__logo {
   width: 100%;
@@ -15,6 +26,18 @@
   font-size: 1.8rem;
   box-shadow: 3px 5px 6px #dad8d8;
 }
+@media screen and (min-width: 700px) {
+  .header__logo {
+    font-size: 2rem;
+    padding: 2% 0 0 1%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header__logo {
+    font-size: 2.3rem;
+    padding-left: 0;
+  }
+}
 .header__location {
   width: 100%;
   height: 50%;
@@ -25,6 +48,16 @@
   font-weight: 400;
   font-size: 1rem;
   background-color: #ededed;
+}
+@media screen and (min-width: 700px) {
+  .header__location {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header__location {
+    font-size: 1.3rem;
+  }
 }
 .header__location__texte {
   margin-left: 1rem;
@@ -59,6 +92,17 @@
   text-align: center;
   margin-top: -5%;
 }
+@media screen and (min-width: 700px) {
+  .intro__texte {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .intro__texte {
+    margin-top: -1%;
+    width: 35%;
+  }
+}
 .intro__btn {
   width: 70%;
   height: 16%;
@@ -72,13 +116,37 @@
   color: white;
   border-radius: 2rem;
 }
+@media screen and (min-width: 700px) {
+  .intro__btn {
+    width: 50%;
+    height: 18%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .intro__btn {
+    width: 37%;
+    height: 23%;
+  }
+}
 
 .mid {
   width: 100%;
   height: 380px;
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
   margin-top: 13%;
+}
+@media screen and (min-width: 700px) {
+  .mid {
+    height: 470px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .mid {
+    margin-top: 7%;
+  }
 }
 .mid__header {
   font-family: "Roboto";
@@ -88,6 +156,21 @@
   height: 10%;
   margin-left: 4%;
 }
+@media screen and (min-width: 700px) {
+  .mid__header {
+    width: 50%;
+    height: 10%;
+    margin-left: 19%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .mid__header {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .mid__ctr {
   width: 100%;
   height: 90%;
@@ -95,6 +178,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media screen and (min-width: 1100px) {
+  .mid__ctr {
+    width: 100%;
+    height: 95%;
+  }
 }
 .mid__ctr__step {
   display: flex;
@@ -106,6 +195,18 @@
   border-radius: 1.5rem;
   background-color: #f7f7f7;
   box-shadow: 3px 5px 10px #dad8d8;
+}
+@media screen and (min-width: 700px) {
+  .mid__ctr__step {
+    width: 60%;
+    height: 27%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .mid__ctr__step {
+    width: 40%;
+    height: 26%;
+  }
 }
 .mid__ctr .step__num {
   width: 1.2rem;
@@ -136,6 +237,11 @@
   font-size: 1rem;
   margin-left: 10%;
 }
+@media screen and (min-width: 1100px) {
+  .mid__ctr .step__texte {
+    font-size: 1.1rem;
+  }
+}
 
 .lower {
   width: 100%;
@@ -147,14 +253,37 @@
   background-color: #f7f7f7;
   margin-top: 20%;
 }
+@media screen and (min-width: 1100px) {
+  .lower {
+    height: 950px;
+    margin-top: 8%;
+  }
+}
 .lower__header {
   width: 60%;
   height: 3%;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 1.5rem;
-  margin-top: 10%;
-  margin-left: 5%;
+  margin: 10% 0 0 5%;
+}
+@media screen and (min-width: 700px) {
+  .lower__header {
+    width: 45%;
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .lower__header {
+    width: 15%;
+    height: 7%;
+    font-size: 1.8rem;
+    margin: -2% 0 0 3%;
+  }
 }
 .lower__ctr__menu {
   width: 100%;
@@ -164,6 +293,13 @@
   justify-content: space-around;
   align-items: center;
   margin-top: -10%;
+}
+@media screen and (min-width: 1100px) {
+  .lower__ctr__menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80%;
+  }
 }
 .lower a {
   text-decoration: none;
@@ -178,6 +314,17 @@
   border-radius: 1rem;
   background-color: white;
   box-shadow: 3px 5px 6px #dad8d8;
+}
+@media screen and (min-width: 700px) {
+  .lower .menu {
+    width: 63%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .lower .menu {
+    width: 35%;
+    height: 43%;
+  }
 }
 .lower .menu__image {
   width: 100%;
@@ -241,14 +388,34 @@
   background-color: #353131;
   margin-top: 10%;
 }
+@media screen and (min-width: 700px) {
+  .footer {
+    height: 210px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .footer {
+    height: 260px;
+  }
+}
 .footer__header {
   width: 50%;
   height: 10%;
   font-family: "Shrikhand";
   font-size: 1.2rem;
   color: white;
-  margin-left: 8%;
-  margin-top: 8%;
+  margin: 8% 0 2% 8%;
+}
+@media screen and (min-width: 700px) {
+  .footer__header {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4% 0 0 0;
+  }
 }
 .footer__ctr {
   width: 70%;
@@ -259,10 +426,25 @@
   align-items: none;
   margin-left: 5%;
 }
+@media screen and (min-width: 700px) {
+  .footer__ctr {
+    width: 80%;
+    height: 65%;
+    flex-direction: row;
+    margin-left: -1%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .footer__ctr {
+    justify-content: space-between;
+    width: 85%;
+    height: 60%;
+  }
+}
 .footer__ctr__texteicon {
   display: flex;
   flex-direction: row;
-  justify-content: space;
+  justify-content: none;
   align-items: none;
   margin-bottom: -6%;
 }
@@ -274,11 +456,15 @@
   margin-left: 5%;
   margin-bottom: -1%;
 }
+@media screen and (min-width: 1100px) {
+  .footer__ctr__texte {
+    font-size: 1.1rem;
+  }
+}
 .footer__ctr i {
   font-size: 0.9rem;
   color: white;
-  margin-left: 5%;
-  margin-top: 8%;
+  margin: 8% 0 0 5%;
 }
 .footer__ctr .texteicon {
   font-family: "Roboto";
@@ -286,6 +472,11 @@
   font-size: 1rem;
   color: white;
   margin-left: 5%;
+}
+@media screen and (min-width: 1100px) {
+  .footer__ctr .texteicon {
+    font-size: 1.1rem;
+  }
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

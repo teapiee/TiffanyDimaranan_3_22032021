@@ -5,21 +5,48 @@
 
 .header{
     @include measure(100%, 100px);
-    display:flex;
-    flex-direction:column;
-    justify-content: space-around;
+    @include flexBox(flex,column,space-around,none);
+
+    // tablet //
+    @include breakpoint(tablet){
+       height:140px;
+    }
+    // laptop //
+    @include breakpoint(laptop){
+        height:160px;
+     }
+
     &__logo{
         @include measure(100%, 47%);
         @include flexCenter;
-        font-family: family(special);
-        font-size: 1.8rem;
+        @include fontStyle(family(special),weight(none),1.8rem);
         box-shadow:3px 5px 6px #dad8d8;
+
+        // tablet //
+        @include breakpoint(tablet){
+            font-size:2rem;
+            padding:2% 0 0 1%;
+        }
+        // laptop //
+        @include breakpoint(laptop){
+            font-size:2.3rem;
+            padding-left:0;
+     }
     }
     &__location{
         @include measure(100%, 50%);
         @include flexCenter;
         @include fontStyle(family(normal),weight(medium),1rem);
         background-color:#ededed;
+
+        // tablet //
+        @include breakpoint(tablet){
+            font-size:1.2rem;
+        }
+         // laptop //
+         @include breakpoint(laptop){
+            font-size:1.3rem;
+     }
         &__texte{
             margin-left:1rem;
         }
@@ -42,6 +69,17 @@
         @include fontStyle(family(normal),weight(regular),1.2rem);
         text-align: center;
         margin-top:-5%;
+
+        // tablet //
+        @include breakpoint(tablet){
+            width:60%;
+        }
+
+        //laptop//
+         @include breakpoint(laptop){
+            margin-top:-1%;
+            width:35%;
+        }
     }
     &__btn{
         @include measure(70%, 16%);
@@ -50,28 +88,74 @@
         background-image:linear-gradient($color-secondary,$color-primary);
         color:white;
         border-radius:2rem;
+
+        // tablet //
+        @include breakpoint(tablet){
+            @include measure (50%,18%);
+        }
+
+         //laptop//
+         @include breakpoint(laptop){
+            @include measure (37%,23%);
+         }
+
     }
 }
 
 .mid{
     @include measure(100%, 380px);
-    display:flex;
-    flex-direction: column;
+    @include flexBox(flex,column,none,none);
     margin-top:13%;
+
+    //tablet//
+    @include breakpoint(tablet){
+        height:470px;
+    }
+     //laptop//
+     @include breakpoint(laptop){
+       margin-top:7%;
+     }
     &__header{
         @include fontStyle(family(normal),weight(bold),1.6rem);
         @include measure(70%, 10%);
         margin-left:4%;
+
+        //tablet//
+        @include breakpoint(tablet){
+            @include measure(50%, 10%);
+            margin-left:19%;
+        }
+
+         //laptop//
+         @include breakpoint(laptop){
+            width:40%;
+            @include flexCenter;
+         }
     }
     &__ctr{
         @include measure(100%, 90%);
         @include flexBox(flex,column,space-around,center);
+
+         //laptop//
+         @include breakpoint(laptop){
+           @include measure(100%, 95%);
+         }
         &__step{
             @include flexBox(flex,row,flex-start,center);
             @include measure(90%, 25%);
             border-radius:1.5rem;
             background-color: $color-quaternary;
             box-shadow:3px 5px 10px #dad8d8; 
+
+            //tablet//
+            @include breakpoint(tablet){
+                @include measure (60%,27%);
+            }
+
+             //laptop//
+            @include breakpoint(laptop){
+                @include measure (40%,26%);
+         }
         }
         .step__num{
             @include measure(1.2rem,1.2rem);
@@ -93,7 +177,14 @@
         .step__texte{
             @include fontStyle(family(normal),weight(bold),1rem);
             margin-left:10%;
+
+            //laptop//
+             @include breakpoint(laptop){
+                 font-size:1.1rem;
+             }
         }
+
+
     }
 }
 
@@ -102,16 +193,41 @@
     @include flexBox(flex,column,space-around,none);
     background-color:$color-quaternary;
     margin-top: 20%;
+
+    //laptop//
+    @include breakpoint(laptop){
+        height:950px;
+        margin-top:8%;
+    }
     &__header{
         @include measure(60%,3%);
         @include fontStyle(family(normal),weight(bold),1.5rem);
-        margin-top:10%;
-        margin-left:5%;
+        margin: 10% 0 0 5%;
+
+        //tablet//
+        @include breakpoint(tablet){
+            @include measure(45%,3%);
+            @include flexCenter;
+            margin-top:1%;
+        }
+           //laptop//
+         @include breakpoint(laptop){
+            @include measure(15%,7%);
+            font-size: 1.8rem;
+            margin:-2% 0 0 3%;
+         }
     }
     &__ctr__menu{
         @include measure(100%,90%);
         @include flexBox(flex,column,space-around,center);
         margin-top:-10%;
+
+        //laptop//
+         @include breakpoint(laptop){
+            flex-direction:row;
+            flex-wrap: wrap;
+            height:80%;
+         }
     }
     a{
         text-decoration:none;
@@ -122,6 +238,16 @@
         border-radius:1rem;
         background-color: white;
         box-shadow:3px 5px 6px #dad8d8;
+
+        //tablet//
+        @include breakpoint(tablet){
+            width:63%;
+        }
+        //laptop//
+        @include breakpoint(laptop){
+            @include measure(35%,43%);
+         }
+
         &__image{
             @include measure(100%,65%);
             object-fit: cover;
@@ -164,38 +290,78 @@
     @include flexBox(flex,column,space-around,none);
     background-color:rgb(53, 49, 49);
     margin-top: 10%;
+
+     //tablet//
+    @include breakpoint(tablet){
+        height:210px;
+        justify-content: space-between;
+        align-items: center;
+     }
+     //laptop//
+     @include breakpoint(laptop){
+        height:260px;
+     }
+
     &__header{
         @include measure(50%,10%);
         @include fontStyle(family(special),weight(none),1.2rem);
         color:white;
-        margin-left:8%;
-        margin-top:8%;
+        margin: 8% 0 2% 8%;
+        
+
+        //tablet//
+        @include breakpoint(tablet){
+            width:80%;
+            @include flexCenter;
+            margin: 4% 0 0 0;
+        }
     }
     &__ctr{
         @include measure(70%,90%);
         @include flexBox(flex,column,none,none);
         margin-left:5%;
-        &__texteicon{
-            @include flexBox(flex,row,space,none);
-            margin-bottom:-6%;
 
+        //tablet//
+        @include breakpoint(tablet){
+            @include measure(80%,65%);
+            flex-direction: row;
+            margin-left:-1%;
+        }
+        //laptop//
+        @include breakpoint(laptop){
+         justify-content:space-between;
+         @include measure(85%,60%);
+     }
+
+        &__texteicon{
+            @include flexBox(flex,row,none,none);
+            margin-bottom:-6%;
         }
         &__texte{
             @include fontStyle(family(normal),weight(regular),1rem);
             color:white;
-            margin-left:5%;
+            margin-left:5%;  //figure out how to shorten both this margin//
             margin-bottom:-1%;
+
+            //laptop//
+             @include breakpoint(laptop){
+                font-size:1.1rem;
+             } 
         }
         i{
             font-size:0.9rem;
             color:white;
-            margin-left:5%;
-            margin-top:8%;
+            margin:8% 0 0 5%;
         }
         .texteicon{
             @include fontStyle(family(normal),weight(bold),1rem);
             color:white;
             margin-left:5%;
+
+            //laptop//
+            @include breakpoint(laptop){
+                font-size:1.1rem;
+             } 
         }
     }
 }
