@@ -1,0 +1,19 @@
+.btn{
+    @include measure(70%, 16%);
+    @include fontStyle(family(normal),weight(medium),1.1rem);
+    @include flexCenter;
+    background-image:linear-gradient($color-secondary,$color-primary);
+    color:white;
+    border-radius:2rem;
+
+    // tablet //
+    @include breakpoint(tablet){
+        @include measure (50%,18%);
+    }
+
+     //laptop//
+     @include breakpoint(laptop){
+        @include measure (37%,23%);
+     }
+
+}
