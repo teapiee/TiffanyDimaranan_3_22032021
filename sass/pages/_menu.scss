@@ -1,0 +1,80 @@
+.header{
+    position:relative;
+
+    i { 
+        position:absolute;
+        top:25px;
+        left:23px;
+        color:black;
+        font-size: 1.2rem;
+    }
+}
+
+.pagemenu-image{
+    @include measure (100%,280px);
+
+    img{
+        @include measure(100%, 100%);
+        object-fit: cover;
+    }
+}
+
+.menuctr{
+    @include measure (100%,1300px);
+    @include flexBox (flex,column,flex-start,center);
+    border-radius:3rem 3rem 0rem 0rem;
+    background-color:#ededed;//change to color-quaternary//
+    &__header{
+        @include measure(100%,5%);
+        @include flexBox(flex,row,space-around,none);
+        p{
+            @include fontStyle(family(special),weight(none),1.8rem);
+        }
+        i{
+            padding-top:2.2rem; 
+        }
+    }
+    &__contenu{
+        @include measure(100%,75%);
+        .plats{ 
+            @include measure(100%,33%);
+            @include flexBox(flex,column,space-around,center);
+            &__header{
+                @include measure(90%,5%);
+                @include fontStyle(family(normal),weight(regular),1.1rem);
+            }
+            &__choix{
+                @include measure(95%,21%);
+                @include flexBox(flex,row,space-between,none);
+                background-color:white;
+                border-radius: 1rem;
+                box-shadow:4px 4px 8px #d6d4d4;
+                &__texte{
+                    margin-left:0.8rem;
+                    .nom-plat{
+                        @include fontStyle(family(normal),weight(bold),1.1rem); 
+                        margin-top:0.8rem;
+                    }
+                    .description-plat{
+                        @include fontStyle(family(normal),weight(regular),0.9rem); 
+                        margin-top:-0.7rem;
+                    }
+                }
+                &__prix{
+                    margin:1.3rem 1rem 0 0;
+                    .prix{
+                        @include fontStyle(family(normal),weight(bold),0.9rem); 
+                    }
+                }
+            }
+        }
+    }
+    .btn{
+        @include measure (60%,5%);
+        margin-top:5rem;
+    }
+}
+
+.footer{
+    margin-top:0;
+}

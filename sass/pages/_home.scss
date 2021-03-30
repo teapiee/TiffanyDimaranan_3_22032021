@@ -1,8 +1,9 @@
-.header__location{
-    @include measure(100%, 50%);
+.location{
+    @include measure(100%,55px);
     @include flexCenter;
     @include fontStyle(family(normal),weight(medium),1rem);
     background-color:#ededed;
+    margin-top:0.2rem;
 
     // tablet //
     @include breakpoint(tablet){

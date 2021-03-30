@@ -1,32 +1,18 @@
 
 .header{
-    @include measure(100%, 100px);
-    @include flexBox(flex,column,space-around,none);
+    @include measure(100%, 65px);
+    @include flexCenter;
+    @include fontStyle(family(special),weight(none),1.8rem);
+    box-shadow:3px 3px 7px #c5c3c3;
 
     // tablet //
     @include breakpoint(tablet){
-       height:140px;
+        font-size:2rem;
+        padding:2% 0 0 1%;
     }
     // laptop //
-    @include breakpoint(laptop){
-        height:160px;
+     @include breakpoint(laptop){
+         font-size:2.3rem;
+         padding-left:0;
      }
-
-    &__logo{
-        @include measure(100%, 47%);
-        @include flexCenter;
-        @include fontStyle(family(special),weight(none),1.8rem);
-        box-shadow:3px 5px 6px #dad8d8;
-
-        // tablet //
-        @include breakpoint(tablet){
-            font-size:2rem;
-            padding:2% 0 0 1%;
-        }
-        // laptop //
-        @include breakpoint(laptop){
-            font-size:2.3rem;
-            padding-left:0;
-     }
-    }
 }
