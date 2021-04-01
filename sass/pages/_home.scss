@@ -4,15 +4,14 @@
     @include fontStyle(family(normal),weight(medium),1rem);
     background-color:#ededed;
     margin-top:0.2rem;
-
-    // tablet //
+    //tablet//
     @include breakpoint(tablet){
         font-size:1.2rem;
     }
-     // laptop //
-     @include breakpoint(laptop){
+    //laptop//
+    @include breakpoint(laptop){
         font-size:1.3rem;
- }
+    }
     &__texte{
         margin-left:1rem;
     }
@@ -35,44 +34,39 @@
         text-align: center;
         margin-top:-5%;
 
-        // tablet //
+        //tablet//
         @include breakpoint(tablet){
             width:60%;
         }
 
         //laptop//
-         @include breakpoint(laptop){
+        @include breakpoint(laptop){
             margin-top:-1%;
             width:35%;
         }
     }
-    
 }
-
 .mid{
     @include measure(100%, 380px);
     @include flexBox(flex,column,none,none);
     margin-top:13%;
-
     //tablet//
     @include breakpoint(tablet){
         height:470px;
     }
-     //laptop//
-     @include breakpoint(laptop){
-       margin-top:7%;
-     }
+    //laptop//
+    @include breakpoint(laptop){
+        margin-top:7%;
+    }
     &__header{
         @include fontStyle(family(normal),weight(bold),1.6rem);
         @include measure(70%, 10%);
         margin-left:4%;
-
         //tablet//
         @include breakpoint(tablet){
             @include measure(50%, 10%);
             margin-left:19%;
         }
-
          //laptop//
          @include breakpoint(laptop){
             width:40%;
@@ -223,6 +217,15 @@
             &__coeur{
                 @include measure(25%,90%);
                 @include flexCenter;
+                position:relative;
+                &:hover{
+                    .far{
+                        opacity:0;
+                    }
+                    .fas{
+                        opacity:1;
+                    }
+                }
                 
             }
             .nom{
@@ -238,13 +241,12 @@
                 font-size:1.5rem;
                 color:black;
                 position:absolute;
+                opacity:1;
             }
             .fas{
                 font-size:1.5rem;
-                color:transparent;
-                &:hover{
-                    color:red;
-                }
+                color:$color-primary;
+                opacity:0;
             }
         }
     }
