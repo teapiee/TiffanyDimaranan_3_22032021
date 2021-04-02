@@ -1,17 +1,20 @@
 
 .header{
-    @include measure(100%, 65px);
+    @include measure(100%, 60px);
     @include flexCenter;
+    text-align: center;
     @include fontStyle(family(special),weight(none),1.8rem);
     box-shadow:3px 3px 7px #c5c3c3;
 
     // tablet //
     @include breakpoint(tablet){
+        height:70px;
         font-size:2rem;
-        padding:2% 0 0 1%;
+        padding-left:1%;
     }
     // laptop //
      @include breakpoint(laptop){
+        height:80px;
          font-size:2.3rem;
          padding-left:0;
      }

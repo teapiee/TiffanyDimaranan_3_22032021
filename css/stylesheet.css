@@ -1,21 +1,24 @@
 .header {
   width: 100%;
-  height: 65px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: "Shrikhand";
   font-size: 1.8rem;
   box-shadow: 3px 3px 7px #c5c3c3;
 }
 @media screen and (min-width: 700px) {
   .header {
+    height: 70px;
     font-size: 2rem;
-    padding: 2% 0 0 1%;
+    padding-left: 1%;
   }
 }
 @media screen and (min-width: 1100px) {
   .header {
+    height: 80px;
     font-size: 2.3rem;
     padding-left: 0;
   }
@@ -29,7 +32,6 @@
   justify-content: space-around;
   align-items: none;
   background-color: #353131;
-  margin-top: 10%;
 }
 @media screen and (min-width: 700px) {
   .footer {
@@ -49,19 +51,25 @@
   font-family: "Shrikhand";
   font-size: 1.2rem;
   color: white;
-  margin: 8% 0 2% 8%;
+  margin: 1.8rem 0 2rem 1.8rem;
 }
 @media screen and (min-width: 700px) {
   .footer__header {
-    width: 80%;
+    font-size: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4% 0 0 0;
+    margin-top: 2.2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .footer__header {
+    font-size: 1.6rem;
+    margin-top: 2.8rem;
   }
 }
 .footer__ctr {
-  width: 70%;
+  width: 65%;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -71,17 +79,18 @@
 }
 @media screen and (min-width: 700px) {
   .footer__ctr {
-    width: 80%;
-    height: 65%;
+    width: 75%;
+    height: 55%;
     flex-direction: row;
-    margin-left: -1%;
+    justify-content: space-around;
+    margin-right: 3rem;
   }
 }
 @media screen and (min-width: 1100px) {
   .footer__ctr {
-    justify-content: space-between;
-    width: 85%;
-    height: 60%;
+    width: 70%;
+    height: 45%;
+    margin-right: 4rem;
   }
 }
 .footer__ctr__texteicon {
@@ -89,35 +98,45 @@
   flex-direction: row;
   justify-content: none;
   align-items: none;
-  margin-bottom: -6%;
+  margin-bottom: 0.7rem;
 }
-.footer__ctr__texte {
-  font-family: "Roboto";
-  font-weight: 300;
-  font-size: 1rem;
-  color: white;
-  margin-left: 5%;
-  margin-bottom: -1%;
+@media screen and (min-width: 700px) {
+  .footer__ctr__texteicon {
+    width: 25%;
+  }
 }
 @media screen and (min-width: 1100px) {
-  .footer__ctr__texte {
-    font-size: 1.1rem;
+  .footer__ctr__texteicon {
+    width: 20%;
   }
 }
 .footer__ctr i {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: white;
-  margin: 8% 0 0 5%;
+  margin-left: 0.8rem;
 }
 .footer__ctr .texteicon {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 1rem;
   color: white;
-  margin-left: 5%;
+  margin-left: 0.7rem;
 }
 @media screen and (min-width: 1100px) {
   .footer__ctr .texteicon {
+    font-size: 1.1rem;
+  }
+}
+.footer__ctr__texte {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  margin-left: 0.8rem;
+  margin-bottom: 0.7rem;
+}
+@media screen and (min-width: 1100px) {
+  .footer__ctr__texte {
     font-size: 1.1rem;
   }
 }
@@ -182,7 +201,6 @@
   justify-content: none;
   align-items: center;
   background-color: #f7f7f7;
-  padding-bottom: 5%;
 }
 .intro__header {
   width: 80%;
@@ -194,6 +212,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 2rem;
 }
 .intro__texte {
   height: 18%;
@@ -201,7 +220,8 @@
   font-weight: 300;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: -5%;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 700px) {
   .intro__texte {
@@ -217,7 +237,7 @@
 
 .mid {
   width: 100%;
-  height: 380px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: none;
@@ -276,8 +296,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 90%;
-  height: 25%;
+  width: 85%;
+  height: 23%;
   border-radius: 1.5rem;
   background-color: #f7f7f7;
   box-shadow: 3px 5px 10px #dad8d8;
@@ -309,31 +329,42 @@
   color: white;
   background-color: #9356dc;
   border-radius: 2rem;
-  margin-left: -3%;
+  margin-left: -0.6rem;
   padding: 0.2rem;
 }
 .mid__ctr i {
   color: #706e6e;
-  margin-left: 6%;
+  margin-left: 1.7rem;
+}
+@media screen and (min-width: 700px) {
+  .mid__ctr i {
+    margin-left: 2.5rem;
+  }
 }
 .mid__ctr .step__texte {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 1rem;
-  margin-left: 10%;
+  margin-left: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .mid__ctr .step__texte {
+    margin-left: 2.5rem;
+    font-size: 1.1rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .mid__ctr .step__texte {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
 .lower {
   width: 100%;
-  height: 1300px;
+  height: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: none;
   background-color: #f7f7f7;
   margin-top: 20%;
@@ -350,7 +381,7 @@
   font-family: "Roboto";
   font-weight: 500;
   font-size: 1.5rem;
-  margin: 10% 0 0 5%;
+  margin: 3.5rem 0 1rem 1rem;
 }
 @media screen and (min-width: 700px) {
   .lower__header {
@@ -359,7 +390,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1%;
+    margin-top: 3rem;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -367,17 +398,16 @@
     width: 15%;
     height: 7%;
     font-size: 1.8rem;
-    margin: -2% 0 0 3%;
+    margin: 3rem 0 0 3.5rem;
   }
 }
 .lower__ctr__menu {
   width: 100%;
-  height: 90%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: -10%;
 }
 @media screen and (min-width: 1100px) {
   .lower__ctr__menu {
@@ -467,12 +497,22 @@
   font-size: 1.2rem;
   color: black;
 }
+@media screen and (min-width: 700px) {
+  .lower .menu__choix .nom {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .lower .menu__choix .nom {
+    margin-bottom: -1rem;
+  }
+}
 .lower .menu__choix .endroit {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 1.1rem;
   color: black;
-  margin-top: -10%;
+  margin-top: -15%;
 }
 .lower .menu__choix .far {
   font-size: 1.5rem;
@@ -482,7 +522,9 @@
 }
 .lower .menu__choix .fas {
   font-size: 1.5rem;
-  color: #9356dc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 
@@ -491,10 +533,22 @@
 }
 .header i {
   position: absolute;
-  top: 25px;
-  left: 23px;
+  top: 1.4rem;
+  left: 1.1rem;
   color: black;
   font-size: 1.2rem;
+}
+@media screen and (min-width: 700px) {
+  .header i {
+    top: 1.7rem;
+    left: 1.8rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .header i {
+    top: 1.9rem;
+    left: 2.5rem;
+  }
 }
 
 .mainctr {
@@ -552,21 +606,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: none;
+  align-items: center;
+  margin-top: 2.5rem;
 }
 @media screen and (min-width: 700px) {
   .menuctr__header {
-    width: 67%;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .menuctr__header {
-    width: 60%;
+    justify-content: center;
   }
 }
 .menuctr__header p {
   font-family: "Shrikhand";
   font-size: 1.8rem;
+  margin-left: 0.5rem;
 }
 @media screen and (min-width: 700px) {
   .menuctr__header p {
@@ -575,12 +626,16 @@
 }
 @media screen and (min-width: 1100px) {
   .menuctr__header p {
-    margin-left: 8.5rem;
     font-size: 2rem;
   }
 }
 .menuctr__header .heart-menu {
-  padding-top: 2.2rem;
+  margin-right: 0.5rem;
+}
+@media screen and (min-width: 700px) {
+  .menuctr__header .heart-menu {
+    margin-left: 3rem;
+  }
 }
 .menuctr__header .heart-menu:hover .far {
   opacity: 0;
@@ -596,12 +651,19 @@
 }
 .menuctr__header .fas {
   font-size: 1.5rem;
-  color: #9356dc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   opacity: 0;
 }
 .menuctr__contenu {
   width: 100%;
   height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 700px) {
   .menuctr__contenu {
@@ -615,7 +677,7 @@
 }
 .menuctr__contenu .plats {
   width: 100%;
-  height: 33%;
+  height: 32%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -627,10 +689,20 @@
   font-family: "Roboto";
   font-weight: 300;
   font-size: 1.1rem;
+  position: relative;
+  line-height: 0.8rem;
+}
+.menuctr__contenu .plats__header:before {
+  position: absolute;
+  left: 0;
+  top: 1.2em;
+  width: 2.8rem;
+  content: "";
+  border-bottom: 0.2rem solid #99e2d0;
 }
 .menuctr__contenu .plats__choix {
   width: 95%;
-  height: 21%;
+  height: 23%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -650,13 +722,14 @@
 @media screen and (min-width: 1100px) {
   .menuctr__contenu .plats__choix__texte {
     margin-left: 1.5rem;
+    margin-top: 0.3rem;
   }
 }
 .menuctr__contenu .plats__choix__texte .nom-plat {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 1.1rem;
-  margin-top: 0.8rem;
+  margin-top: 0.9rem;
 }
 @media screen and (min-width: 1100px) {
   .menuctr__contenu .plats__choix__texte .nom-plat {
@@ -667,12 +740,7 @@
   font-family: "Roboto";
   font-weight: 300;
   font-size: 0.9rem;
-  margin-top: -0.7rem;
-}
-@media screen and (min-width: 1100px) {
-  .menuctr__contenu .plats__choix__texte .description-plat {
-    margin-top: -0.3rem;
-  }
+  margin-top: 0.3rem;
 }
 .menuctr__contenu .plats__choix__prix {
   margin: 1.3rem 1rem 0 0;
@@ -685,7 +753,7 @@
 .menuctr .btn-menu {
   width: 60%;
   height: 5%;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 }
 @media screen and (min-width: 1100px) {
   .menuctr .btn-menu {
@@ -700,6 +768,27 @@
   .footer-menu {
     margin-top: 18rem;
   }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

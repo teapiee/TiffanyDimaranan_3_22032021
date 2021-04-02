@@ -2,10 +2,20 @@
     position:relative;
     i { 
         position:absolute;
-        top:25px;
-        left:23px;
+        top:1.4rem;
+        left:1.1rem;
         color:black;
         font-size: 1.2rem;
+         //tablet//
+         @include breakpoint(tablet){
+        top:1.7rem;
+        left:1.8rem;
+        }
+        //laptop//
+        @include breakpoint(laptop){
+        top:1.9rem;
+        left:2.5rem;
+        }
     }
 }
 .mainctr{
@@ -47,29 +57,30 @@
     
     &__header{
         @include measure(100%,5%);
-        @include flexBox(flex,row,space-around,none);
+        @include flexBox(flex,row,space-around,center);
+        margin-top:2.5rem;
         //tablet//
         @include breakpoint(tablet){
-            width:67%;
+            justify-content: center;
         }
-        //laptop//
-         @include breakpoint(laptop){
-            width:60%;
-    }
         p{
             @include fontStyle(family(special),weight(none),1.8rem);
-            //tablet//
+            margin-left:0.5rem;
+             //tablet//
              @include breakpoint(tablet){
-                margin-left:5rem;
-            }
+             margin-left:5rem;
+        }
             //laptop//
             @include breakpoint(laptop){
-                margin-left:8.5rem;
                 font-size: 2rem;
     }
         }
         .heart-menu{
-            padding-top:2.2rem; 
+            margin-right:0.5rem;
+            //tablet//
+            @include breakpoint(tablet){
+                margin-left:3rem;
+            }
             &:hover{
                 .far{
                     opacity:0;
@@ -87,12 +98,16 @@
         }
         .fas{
             font-size:1.5rem;
-            color:$color-primary;
+            background: -webkit-gradient(linear,left top, left bottom, from($color-primary), to($color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             opacity:0;
         }
     }
     &__contenu{
         @include measure(100%,75%);
+        @include flexBox(flex,column,space-between,none);
+        margin-top:1rem;
         //tablet//
         @include breakpoint(tablet){
             width:75%;
@@ -102,14 +117,24 @@
              width:55%;
         }
         .plats{ 
-            @include measure(100%,33%);
+            @include measure(100%,32%);
             @include flexBox(flex,column,space-around,center);
             &__header{
                 @include measure(90%,5%);
                 @include fontStyle(family(normal),weight(regular),1.1rem);
+                position:relative;
+                line-height: 0.8rem;
+            }
+            &__header:before{
+                position:absolute;
+                left:0;
+                top:1.2em;
+                width:2.8rem;
+                content:'';
+                border-bottom:0.2rem solid $color-tertiary;
             }
             &__choix{
-                @include measure(95%,21%);
+                @include measure(95%,23%);
                 @include flexBox(flex,row,space-between,none);
                 background-color:white;
                 border-radius: 1rem;
@@ -122,21 +147,18 @@
                     margin-left:0.8rem;
                     @include breakpoint(laptop){
                        margin-left:1.5rem;
+                       margin-top:0.3rem;
                      }
                     .nom-plat{
                         @include fontStyle(family(normal),weight(bold),1.1rem); 
-                        margin-top:0.8rem;
+                        margin-top:0.9rem;
                         @include breakpoint(laptop){
                             margin-top:0.9rem;
                         }
                     }
                     .description-plat{
                         @include fontStyle(family(normal),weight(regular),0.9rem); 
-                        margin-top:-0.7rem;
-                        //laptop//
-                        @include breakpoint(laptop){
-                            margin-top:-0.3rem;
-                         }
+                        margin-top:0.3rem;
                     }
 
                 }
@@ -151,7 +173,7 @@
     }
     .btn-menu{
         @include measure (60%,5%);
-        margin-top:5rem;
+        margin-top:3.5rem;
         //laptop//
         @include breakpoint(laptop){
             width:33%;
