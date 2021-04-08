@@ -1,0 +1,44 @@
+.loader{
+    border:2px solid black;
+    border-radius:0.8rem;
+    padding:0.2rem;
+    position:fixed;
+    top:40%;
+    left:5%;
+    animation: loader 1.5s 1.5s forwards;
+    
+    &__bar{
+        background-color: $color-tertiary;
+        border-radius:0.9rem;
+        @include measure (20rem,1.2rem);
+        animation: loader-bar 1.3s;
+        transform-origin: left;
+    }
+}
+
+@keyframes loader{
+    from{
+        transform: scale(1) rotate(360deg);
+    }
+    to{
+        transform:scale(0) rotate(-360deg);
+    }
+}
+
+@keyframes loader-bar{
+    0%{
+        transform:scaleX(0);
+    }
+    25%{
+        transform:scaleX(.2);
+    }
+    50%{
+        transform:scaleX(.55);
+    }
+    75%{
+        transform:scaleX(.8);
+    }
+    100%{
+        transform:scaleX(1);
+    }
+}

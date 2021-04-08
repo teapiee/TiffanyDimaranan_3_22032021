@@ -1,0 +1,17 @@
+
+.container{
+    width:100%;
+    overflow:hidden;
+    position:absolute;
+    z-index:1;
+    animation: container 0ms 2.5s both;
+}
+
+@keyframes container{
+    0%{
+        transform:translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
