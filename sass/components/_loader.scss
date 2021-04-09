@@ -1,31 +1,41 @@
+.loaderctr{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    animation: disappear $dis-dur $dis-delay forwards;
+}
+
 .loader{
-    border:2px solid black;
+    border:0.4rem solid black;
     border-radius:0.8rem;
     padding:0.2rem;
-    position:fixed;
-    top:40%;
-    left:5%;
-    animation: loader 1.5s 1.5s forwards;
-    
     &__bar{
         background-color: $color-tertiary;
         border-radius:0.9rem;
         @include measure (20rem,1.2rem);
-        animation: loader-bar 1.3s;
+        
+        animation: progress $prog-dur $prog-delay both;
         transform-origin: left;
+
+        //tablet//
+        @include breakpoint(tablet){
+            @include measure (25rem,1.7rem);
+        }
     }
 }
 
-@keyframes loader{
+@keyframes disappear{ //decreases then rotates:fade away // 
     from{
         transform: scale(1) rotate(360deg);
     }
     to{
-        transform:scale(0) rotate(-360deg);
+        transform:scale(0)  rotate(-360deg);
     }
 }
 
-@keyframes loader-bar{
+@keyframes progress{ 
     0%{
         transform:scaleX(0);
     }

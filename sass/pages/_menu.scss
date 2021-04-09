@@ -124,12 +124,12 @@
                 position:relative;
                 line-height: 0.8rem;
             }
-            &__header:before{
+            &__header:after{
+                content:'';
                 position:absolute;
                 left:0;
                 top:1.2em;
                 width:2.8rem;
-                content:'';
                 border-bottom:0.2rem solid $color-tertiary;
             }
             &__choix{
@@ -184,4 +184,23 @@
     @include breakpoint(laptop){
         margin-top:18rem;
      }
+}
+
+.plats__choix--1{
+    animation:menuslide 700ms 200ms backwards;
+}
+.plats__choix--2{
+    animation:menuslide 700ms 400ms backwards;
+}
+.plats__choix--3{
+    animation:menuslide 700ms 600ms backwards;
+}
+
+@keyframes menuslide {
+    0%{
+        transform:scaleY(0);
+    }
+    100%{
+        transform:scaleY(1);
+    }
 }

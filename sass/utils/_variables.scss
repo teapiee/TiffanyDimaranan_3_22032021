@@ -12,3 +12,12 @@ $font-families: (
     "special":"Shrikhand",
     "normal":"Roboto",
 );
+
+//loading spinner //
+$prog-dur: 1.3s;
+$prog-delay:200ms;
+
+$dis-dur:0.8s;
+$dis-delay: $prog-dur + $prog-delay;
+
+$container-delay: $prog-dur + $prog-delay + $dis-dur;

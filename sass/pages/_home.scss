@@ -4,6 +4,7 @@
     @include fontStyle(family(normal),weight(medium),1rem);
     background-color:#ededed;
     margin-top:0.2rem;
+   
     //tablet//
     @include breakpoint(tablet){
         font-size:1.2rem;
@@ -264,8 +265,11 @@
             }
             .fas{
                 font-size:1.5rem;
-                background:gradient(linear,left top, left bottom, from($color-primary), to($color-secondary));
-                background-clip: text;
+
+                // not working // find fix //
+                background:-webkit-gradient(linear, left top, right bottom, from($color-primary), to($color-secondary));
+                background-clip:text;
+                -webkit-background-clip: text;
                 opacity: 0;
             }
         }

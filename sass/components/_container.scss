@@ -1,17 +1,17 @@
-
-.container{
+// hide container while spinner loads then bring back container when spinner ends //
+.container{ //home page//
     width:100%;
     overflow:hidden;
     position:absolute;
     z-index:1;
-    animation: container 0ms 2.5s both;
+    animation: container 0ms $container-delay both;
 }
 
 @keyframes container{
     0%{
-        transform:translateX(-1000px);
+        transform:translateX(-1450px);
     }
     100%{
-        transform: translateX(0);
+        transform: translate(0,-100vh);
     }
 }
