@@ -1,0 +1,50 @@
+.heart{  //heart for home page//
+    @include measure(25%,90%);
+    @include flexCenter;
+    position:relative;
+    &:hover{
+        .far{
+            opacity:0;
+            transition: all 1s linear;
+        }
+        .fas{
+            opacity:1;
+            transition: all 1s linear;
+        }
+    }
+}
+
+.heart-menu{ // heart for menu page //
+    margin-right:0.5rem;
+    cursor: pointer;
+    //tablet//
+    @include breakpoint(tablet){
+        margin-left:3rem;
+    }
+    &:hover{
+        .far{
+            opacity:0;
+            transition: all 1s linear;
+        }
+        .fas{
+            opacity:1;
+            transition: all 1s linear;
+        }
+    }
+}
+
+ // home page and menu page //
+.heartempty{
+    font-size:1.5rem;
+    color:black;
+    position:absolute;
+    opacity:1; 
+}
+.heartfull{
+    font-size:1.5rem;
+    opacity: 0;
+    color:transparent;
+    background: linear-gradient($color-primary, $color-secondary);
+    background-clip:text;
+    -webkit-background-clip: text; 
+}

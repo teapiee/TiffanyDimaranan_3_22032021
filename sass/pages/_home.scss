@@ -225,20 +225,7 @@
                 @include flexBox(flex,column,space-around,none);
                 margin-left:4%;
             }
-            &__coeur{
-                @include measure(25%,90%);
-                @include flexCenter;
-                position:relative;
-                &:hover{
-                    .far{
-                        opacity:0;
-                    }
-                    .fas{
-                        opacity:1;
-                    }
-                }
-                
-            }
+            
             .nom{
                 @include fontStyle(family(normal),weight(bold),1.2rem); 
                 color:black;
@@ -257,22 +244,7 @@
                 color:black;
                 margin-top:-15%;
             }
-            .far{
-                font-size:1.5rem;
-                color:black;
-                position:absolute;
-                opacity:1;
-            }
-            .fas{
-                font-size:1.5rem;
-
-                // not working // find fix //
-                background:-webkit-gradient(linear, left top, right bottom, from($color-primary), to($color-secondary));
-                background-clip:text;
-                -webkit-background-clip: text;
-                opacity: 0;
-            }
+            
         }
     }
 }
-
