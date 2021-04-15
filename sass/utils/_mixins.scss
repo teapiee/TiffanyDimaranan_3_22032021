@@ -21,6 +21,16 @@
     justify-content:$justify;
     align-items:$align;
 }
+@mixin flexJustify ($display,$direction,$justify){
+    display:$display;
+    flex-direction:$direction;
+    justify-content: $justify;
+}
+@mixin flexAlign ($display,$direction,$align){
+    display:$display;
+    flex-direction:$direction;
+    align-items: $align;
+}
 @mixin fontStyle($family,$weight,$size) {
     font-family:$family;
     font-weight:$weight;

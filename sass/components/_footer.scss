@@ -1,6 +1,6 @@
 .footer{
     @include measure(100%,250px);
-    @include flexBox(flex,column,space-around,none);
+    @include flexJustify(flex,column,space-around);
     background-color:rgb(53, 49, 49);
 
      //tablet//
@@ -35,7 +35,8 @@
     }
     &__ctr{
         @include measure(65%,90%);
-        @include flexBox(flex,column,none,none);
+        display:flex;
+        flex-direction: column;
         margin-left:5%;
 
         //tablet//
@@ -53,7 +54,8 @@
      }
 
         &__texteicon{
-            @include flexBox(flex,row,none,none); 
+            display:flex;
+            flex-direction: row;
             margin-bottom:0.7rem; 
             //tablet//
              @include breakpoint(tablet){
@@ -89,6 +91,9 @@
              @include breakpoint(laptop){
                 font-size:1.1rem;
              } 
+        }
+        a{
+            text-decoration: none;
         }
         
     }

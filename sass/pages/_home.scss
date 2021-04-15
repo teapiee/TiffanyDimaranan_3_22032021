@@ -20,7 +20,7 @@
 
 .intro{
     @include measure(100%, 330px);
-    @include flexBox(flex,column,none,center);
+    @include flexAlign(flex,column,center);
     background-color:$color-quaternary;
     
     &__header{
@@ -52,7 +52,8 @@
 }
 .mid{
     @include measure(100%, 350px);
-    @include flexBox(flex,column,none,none);
+    display:flex;
+    flex-direction: column;
     margin-top:13%;
     //tablet//
     @include breakpoint(tablet){
@@ -143,7 +144,7 @@
 
 .lower{
     @include measure(100%,1200px);
-    @include flexBox(flex,column,flex-start,none);
+    @include flexJustify(flex,column,flex-start);
     background-color:$color-quaternary;
     margin-top: 20%;
 
@@ -186,7 +187,8 @@
     }
     .menu{
         @include measure(90%,23%);
-        @include flexBox(flex,column,none,none);
+        display:flex;
+        flex-direction: column;
         border-radius:1rem;
         background-color: white;
         box-shadow:3px 5px 6px #dad8d8;
@@ -219,10 +221,10 @@
         }
         &__choix{
             @include measure(100%,35%);
-            @include flexBox(flex,row,space-between,none);
+            @include flexJustify(flex,row,space-between);
             &__texte{
                 @include measure(60%,100%);
-                @include flexBox(flex,column,space-around,none);
+                @include flexJustify(flex,column,space-around);
                 margin-left:4%;
             }
             
