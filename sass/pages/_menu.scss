@@ -78,7 +78,7 @@
     }
     &__contenu{
         @include measure(100%,75%);
-        @include flexBox(flex,column,space-between,none);
+        @include flexJustify(flex,column,space-between);
         margin-top:1rem;
         //tablet//
         @include breakpoint(tablet){
@@ -107,11 +107,11 @@
             }
             &__choix{
                 @include measure(95%,23%);
-                @include flexBox(flex,row,space-between,none);
+                @include flexJustify(flex,row,space-between);
                 background-color:white;
                 border-radius: 1rem;
                 box-shadow:4px 4px 8px #d6d4d4;
-                
+                text-overflow: ellipsis;
                 //laptop//
                 @include breakpoint(laptop){
                     height:22%;
@@ -137,7 +137,7 @@
 
                 }
                 &__prix{
-                    margin:1.3rem 1rem 0 0;
+                    margin:1.3rem 0rem 0 0.5rem;
                     border:1px solid gray;
                     .prix{
                         @include fontStyle(family(normal),weight(bold),0.9rem); 
@@ -159,6 +159,7 @@
 
 .footer-menu{
     margin-top:-3.5rem;
+    //laptop//
     @include breakpoint(laptop){
         margin-top:18rem;
     }
@@ -176,14 +177,15 @@
 
 .plats__choix{
     &:hover {
-        & > .valid {
+        & > .valid{
             margin-right:0px; // to be fixed // 
-            &__check{ // to be fixed //
-                transform:rotate(1turn);
+            & > .valid__check{ // to be fixed //
+             transform:rotate(360deg);
             }
         }
     }
 }
+
 
 
 .valid{
@@ -193,6 +195,14 @@
     border-radius: 0 1rem 1rem 0;
     margin-right:-150px; // to be fixed // 
     transition:all 700ms ease-in-out;
+    //tablet//
+    @include breakpoint(tablet){
+        margin-right:-500px;
+        }
+    //laptop//
+    @include breakpoint(laptop){
+        margin-right:-999px;
+    }
     
     &__check{
         @include measure(50%,45%);
