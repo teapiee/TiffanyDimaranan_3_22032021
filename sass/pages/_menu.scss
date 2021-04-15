@@ -69,38 +69,11 @@
              //tablet//
              @include breakpoint(tablet){
              margin-left:5rem;
-        }
+            }
             //laptop//
             @include breakpoint(laptop){
                 font-size: 2rem;
-    }
-        }
-        .heart-menu{
-            margin-right:0.5rem;
-            //tablet//
-            @include breakpoint(tablet){
-                margin-left:3rem;
             }
-            &:hover{
-                .far{
-                    opacity:0;
-                }
-                .fas{
-                    opacity:1;
-                }
-            }
-        }
-        .far{
-            font-size:1.5rem;
-            color:black;
-            position:absolute;
-            opacity:1;
-        }
-        .fas{
-            font-size:1.5rem;
-            background:gradient(linear,left top, left bottom, from($color-primary), to($color-secondary));
-            background-clip: text;
-            opacity:0;
         }
     }
     &__contenu{
@@ -138,12 +111,14 @@
                 background-color:white;
                 border-radius: 1rem;
                 box-shadow:4px 4px 8px #d6d4d4;
+                
                 //laptop//
                 @include breakpoint(laptop){
                     height:22%;
                 }
                 &__texte{
                     margin-left:0.8rem;
+                    border:1px solid gray;
                     @include breakpoint(laptop){
                        margin-left:1.5rem;
                        margin-top:0.3rem;
@@ -163,44 +138,82 @@
                 }
                 &__prix{
                     margin:1.3rem 1rem 0 0;
+                    border:1px solid gray;
                     .prix{
                         @include fontStyle(family(normal),weight(bold),0.9rem); 
                     }
                 }
             }
         }
-    }
-    .btn-menu{
-        @include measure (60%,5%);
-        margin-top:3.5rem;
-        //laptop//
-        @include breakpoint(laptop){
-            width:33%;
-       }
-    }
+    }  
 }
+
+.btn-menu{
+    @include measure (60%,5%);
+    margin-top:3.5rem;
+    //laptop//
+    @include breakpoint(laptop){
+        width:33%;
+   }
+}
+
 .footer-menu{
     margin-top:-3.5rem;
     @include breakpoint(laptop){
         margin-top:18rem;
-     }
+    }
 }
 
 .plats__choix--1{
-    animation:menuslide 700ms 200ms backwards;
+    animation:menuslide 800ms 200ms backwards ease-in;
 }
 .plats__choix--2{
-    animation:menuslide 700ms 400ms backwards;
+    animation:menuslide 800ms 400ms backwards ease-in;
 }
 .plats__choix--3{
-    animation:menuslide 700ms 600ms backwards;
+    animation:menuslide 800ms 600ms backwards ease-in;
+}
+
+.plats__choix{
+    &:hover {
+        & > .valid {
+            margin-right:0px; // to be fixed // 
+            &__check{ // to be fixed //
+                transform:rotate(1turn);
+            }
+        }
+    }
+}
+
+
+.valid{
+    @include measure(18%,100%);
+    @include flexCenter;
+    background-color: $color-tertiary;
+    border-radius: 0 1rem 1rem 0;
+    margin-right:-150px; // to be fixed // 
+    transition:all 700ms ease-in-out;
+    
+    &__check{
+        @include measure(50%,45%);
+        @include flexCenter;
+        color:$color-tertiary;
+        border-radius:50%;
+        background-color: white;
+        transition:transform 1s linear; // to be fixed // 
+    }
 }
 
 @keyframes menuslide {
-    0%{
-        transform:scaleY(0);
+    0%, 30%{
+        opacity:0;
+        transform:translateY(0.7);
+    }
+    60%{
+        opacity:0.5;
     }
     100%{
-        transform:scaleY(1);
+        opacity:1;
+        transform:translateY(1);
     }
 }
