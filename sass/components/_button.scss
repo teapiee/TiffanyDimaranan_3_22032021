@@ -2,9 +2,14 @@
     @include measure(70%, 16%);
     @include fontStyle(family(normal),weight(medium),1.1rem);
     @include flexCenter;
-    background-image:linear-gradient($color-secondary,$color-primary);
+    background:linear-gradient($color-secondary,$color-primary);
     color:white;
     border-radius:2rem;
+    box-shadow:3px 5px 6px #dad8d8;
+    &:hover{
+        background: linear-gradient( rgba(255, 121, 218, 0.9),rgba(147, 86, 220, 0.9));
+        box-shadow:3px 5px 6px darken(#dad8d8,15);
+    }
 
     // tablet //
     @include breakpoint(tablet){
