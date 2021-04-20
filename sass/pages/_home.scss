@@ -93,6 +93,9 @@
             box-shadow:3px 5px 10px #dad8d8; 
             &:hover{
                 background-color:lighten($color-primary,35);
+                i{
+                    color:$color-primary;
+                }
             }
 
             //tablet//
