@@ -6,12 +6,3 @@
     z-index:1;
     animation: container 0ms $container-delay both;
 }
-
-@keyframes container{
-    0%{
-        transform:translateX(-1450px);
-    }
-    100%{
-        transform: translate(0,-100vh);
-    }
-}

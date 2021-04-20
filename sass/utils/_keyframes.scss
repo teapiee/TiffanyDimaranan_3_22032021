@@ -1,0 +1,51 @@
+// animation keyframes // 
+
+@keyframes progress{ // loading bar progress //
+    0%{
+        transform:scaleX(0);
+    }
+    25%{
+        transform:scaleX(.2);
+    }
+    50%{
+        transform:scaleX(.55);
+    }
+    75%{
+        transform:scaleX(.8);
+    }
+    100%{
+        transform:scaleX(1);
+    }
+}
+
+@keyframes disappear{ // loadbar rotates and fades away//
+    from{
+        transform: scale(1) rotate(360deg);
+    }
+    to{
+        transform:scale(0)  rotate(-360deg);
+    }
+}
+
+@keyframes container{ // container reappears //
+    0%{
+        transform:translateX(-1450px);
+    }
+    100%{
+        transform: translate(0,-100vh);
+    }
+}
+
+@keyframes menuslide { // menu options slides one by one //
+    0%, 30%{
+        opacity:0;
+        transform:translateY(0);
+    }
+    60%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:1;
+        transform:translateY(1);
+    }
+}
