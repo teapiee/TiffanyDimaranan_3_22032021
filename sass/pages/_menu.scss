@@ -56,7 +56,7 @@
     }
     
     &__header{
-        @include measure(100%,5%);
+        @include measure(100%,4%);
         @include flexBox(flex,row,space-around,center);
         margin-top:2.5rem;
         //tablet//
@@ -77,7 +77,7 @@
         }
     }
     &__contenu{
-        @include measure(100%,75%);
+        @include measure(100%,80%);
         @include flexJustify(flex,column,space-between);
         margin-top:1rem;
         //tablet//
@@ -89,10 +89,10 @@
              width:55%;
             }
         .plats{ 
-            @include measure(100%,32%);
+            @include measure(100%,33%);
             @include flexBox(flex,column,space-around,center);
             &__header{
-                @include measure(90%,5%);
+                @include measure(90%,4%);
                 @include fontStyle(family(normal),weight(regular),1.1rem);
                 position:relative;
                 line-height: 0.8rem;
@@ -105,63 +105,67 @@
                 width:2.8rem;
                 border-bottom:0.2rem solid $color-tertiary;
             }
-            &__choix{
-                display:flex;
-                
-                @include measure(95%,23%);
-                background-color:white;
-                border-radius: 1rem;
-                box-shadow:4px 4px 8px #d6d4d4;
-                overflow:hidden;
-                
-                //laptop//
-                @include breakpoint(laptop){
-                    height:22%;
-                }
-                
-                &__main{
-                    @include measure(100%,100%);
+            &__choixbox{
+                @include measure(100%,85%);
+                @include flexBox(flex,column,space-around,center);
+            
+                .plats__choix{
                     display:flex;
-                    justify-content: space-between;     
+                    @include measure(95%,26%);
+                    background-color:white;
+                    border-radius: 1rem;
+                    box-shadow:4px 4px 8px #d6d4d4;
+                    overflow:hidden;
+                    
+                    //laptop//
+                    @include breakpoint(laptop){
+                        height:22%;
+                    }
                 
-                    .main__texte{
-                        width:80%;
-                        margin-left:0.8rem;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space:nowrap;
-                        //border:1px solid gray;//
-                        @include breakpoint(laptop){
-                        margin-left:1.5rem;
-                        }
-                        .nom-plat{
-                            width:100%;
+                    &__main{
+                        @include measure(100%,100%);
+                        display:flex;
+                        justify-content: space-between;     
+                    
+                        .main__texte{
+                            //width:80%;//
+                            margin-left:0.8rem;
                             text-overflow: ellipsis;
                             overflow: hidden;
                             white-space:nowrap;
-                            @include fontStyle(family(normal),weight(bold),1.1rem); 
-                            margin-top:0.9rem;
+                            border:1px solid gray;
                             @include breakpoint(laptop){
+                            margin-left:1.5rem;
+                            }
+                            .nom-plat{
+                               // width:100%;//
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space:nowrap;
+                                @include fontStyle(family(normal),weight(bold),1.1rem); 
                                 margin-top:0.9rem;
+                                @include breakpoint(laptop){
+                                    margin-top:0.9rem;
+                                }
+                            }
+                            .description-plat{
+                                //width:100%;//
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space:nowrap;
+                                @include fontStyle(family(normal),weight(regular),1.02rem); 
+                                margin-top:0.3rem;
                             }
                         }
-                        .description-plat{
-                            width:100%;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space:nowrap;
-                            @include fontStyle(family(normal),weight(regular),1rem); 
-                            margin-top:0.3rem;
-                        }
-                    }
 
-                    .main__prix{
-                        width:7%;
-                        margin-top:2.5rem;
-                        margin-right:1rem;
-                    
-                        .prix{
-                         @include fontStyle(family(normal),weight(bold),0.9rem); 
+                        .main__prix{
+                            width:7%;
+                            margin-top:2.5rem;
+                            margin-right:1rem;
+                        
+                            .prix{
+                            @include fontStyle(family(normal),weight(bold),0.9rem); 
+                            }
                         }
                     }
                 }
@@ -172,7 +176,7 @@
 
 .btn-menu{
     @include measure (60%,5%);
-    margin-top:3.5rem;
+    margin-top:2rem;
     //laptop//
     @include breakpoint(laptop){
         width:33%;
@@ -187,15 +191,24 @@
     }
 }
 
+// menu2 avec 4 choix d'entrée //
+#quatrechoix{
+    height:22%;
+}
+
+
 // menuslide animation //
 .plats__choix--1{
-    animation:menuslide 800ms 200ms backwards ease-in;
+    animation:menuslide 1s 200ms backwards ease-in;
 }
 .plats__choix--2{
-    animation:menuslide 800ms 400ms backwards ease-in;
+    animation:menuslide 1s 400ms backwards ease-in;
 }
 .plats__choix--3{
-    animation:menuslide 800ms 600ms backwards ease-in;
+    animation:menuslide 1s 600ms backwards ease-in;
+}
+.plats__choix--4{
+    animation:menuslide 1s 800ms backwards ease-in;
 }
 
 // checkbox animation //
@@ -212,11 +225,11 @@
 }
 
 .plats__choix__checkbox{
-    @include measure(100px,100%);
+    @include measure(120px,100%);
     @include flexCenter;
     background-color: $color-tertiary;
     border-radius: 0 1rem 1rem 0;
-    margin-right:-100px;
+    margin-right:-120px;
     transition: all 700ms linear;
 
      //tablet//
