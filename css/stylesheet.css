@@ -810,7 +810,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  border: 1px solid gray;
 }
 @media screen and (min-width: 1100px) {
   .menuctr__contenu .plats__choixbox .plats__choix__main .main__texte {
