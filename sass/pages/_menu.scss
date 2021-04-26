@@ -123,21 +123,26 @@
                     }
                 
                     &__main{
-                        @include measure(100%,100%);
+                        min-width:70%;
+                        //@include measure(100%,100%);
+                        width: 100%;
+                        height:100%;
                         display:flex;
-                        justify-content: space-between;     
+                        justify-content: space-between; 
+                           
                     
                         .main__texte{
-                            //width:80%;//
+                            width:80%;
                             margin-left:0.8rem;
                             text-overflow: ellipsis;
                             overflow: hidden;
                             white-space:nowrap;
                             @include breakpoint(laptop){
                             margin-left:1.5rem;
+                            flex-grow:0;
                             }
                             .nom-plat{
-                               // width:100%;//
+                                //width:100%;
                                 text-overflow: ellipsis;
                                 overflow: hidden;
                                 white-space:nowrap;
@@ -148,19 +153,20 @@
                                 }
                             }
                             .description-plat{
-                                //width:100%;//
+                               // width:100%;
                                 text-overflow: ellipsis;
                                 overflow: hidden;
                                 white-space:nowrap;
-                                @include fontStyle(family(normal),weight(regular),1.02rem); 
+                                @include fontStyle(family(normal),weight(regular),1rem); 
                                 margin-top:0.3rem;
                             }
                         }
 
                         .main__prix{
-                            width:7%;
+                            width:30px;
                             margin-top:2.5rem;
                             margin-right:1rem;
+                            margin-left:1rem;
                         
                             .prix{
                             @include fontStyle(family(normal),weight(bold),0.9rem); 
@@ -224,11 +230,11 @@
 }
 
 .plats__choix__checkbox{
-    @include measure(120px,100%);
+    @include measure(80px,100%);
     @include flexCenter;
     background-color: $color-tertiary;
     border-radius: 0 1rem 1rem 0;
-    margin-right:-120px;
+    margin-right:-90px;
     transition: all 700ms linear;
 
      //tablet//
@@ -241,7 +247,9 @@
     }
    
     .check{
-        @include measure(50%,45%);
+      // @include measure(50%,50%);
+        font-size:18px;
+        padding:8px;
         @include flexCenter;
         color:$color-tertiary;
         border-radius:50%;
