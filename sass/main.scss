@@ -2,12 +2,12 @@
 @import './utils/functions';
 @import './utils/mixins';
 @import './utils/keyframes';
-@import './components/header';
-@import './components/footer';
 @import './components/button';
 @import './components/heart';
 @import './components/loader';
 @import './components/container';
+@import './layouts/header';
+@import './layouts/footer';
 @import './pages/home';
 @import './pages/menu';
 
