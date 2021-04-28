@@ -15,7 +15,6 @@
         background-color: $color-tertiary;
         border-radius:0.9rem;
         @include measure (20rem,1.2rem);
-        
         animation: progress $prog-dur $prog-delay both;
         transform-origin: left;
 
