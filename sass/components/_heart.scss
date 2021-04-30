@@ -5,11 +5,11 @@
     &:hover{
         .far{
             opacity:0;
-            transition: all 1s linear;
+            transition: all $heart-dur linear;
         }
         .fas{
             opacity:1;
-            transition: all 1s linear;
+            transition: all $heart-dur linear;
         }
     }
 }
@@ -24,11 +24,11 @@
     &:hover{
         .far{
             opacity:0;
-            transition: all 1s linear;
+            transition: all $heart-dur linear;
         }
         .fas{
             opacity:1;
-            transition: all 1s linear;
+            transition: all $heart-dur linear;
         }
     }
 }
