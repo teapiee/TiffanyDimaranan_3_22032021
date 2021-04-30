@@ -34,16 +34,135 @@
 @keyframes menuslide {
   0%, 30% {
     opacity: 0;
-    transform: translateY(0);
+    margin-top: 10px;
   }
   60% {
     opacity: 0.5;
   }
   100% {
     opacity: 1;
-    transform: translateY(1);
+    margin-top: 0px;
   }
 }
+.btn {
+  width: 70%;
+  height: 16%;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  border-radius: 2rem;
+  box-shadow: 3px 5px 6px #dad8d8;
+}
+.btn:hover {
+  background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  box-shadow: 3px 5px 6px #b5b1b1;
+}
+@media screen and (min-width: 700px) {
+  .btn {
+    width: 50%;
+    height: 18%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .btn {
+    width: 37%;
+    height: 23%;
+  }
+}
+
+.heart {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.heart:hover .far {
+  opacity: 0;
+  transition: all 1s linear;
+}
+.heart:hover .fas {
+  opacity: 1;
+  transition: all 1s linear;
+}
+
+.heart-menu {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .heart-menu {
+    margin-left: 3rem;
+  }
+}
+.heart-menu:hover .far {
+  opacity: 0;
+  transition: all 1s linear;
+}
+.heart-menu:hover .fas {
+  opacity: 1;
+  transition: all 1s linear;
+}
+
+.heartempty {
+  font-size: 1.5rem;
+  color: black;
+  position: absolute;
+  opacity: 1;
+}
+
+.heartfull {
+  font-size: 1.5rem;
+  opacity: 0;
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.loaderctr {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disappear 0.8s 1.5s forwards;
+}
+
+.loader {
+  border: 0.4rem solid black;
+  border-radius: 0.8rem;
+  padding: 0.2rem;
+}
+.loader__bar {
+  background-color: #99e2d0;
+  border-radius: 0.9rem;
+  width: 20rem;
+  height: 1.2rem;
+  animation: progress 1.3s 200ms both;
+  transform-origin: left;
+}
+@media screen and (min-width: 700px) {
+  .loader__bar {
+    width: 25rem;
+    height: 1.7rem;
+  }
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  animation: container 0ms 2.3s both;
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -183,125 +302,6 @@
 }
 .footer__ctr a {
   text-decoration: none;
-}
-
-.btn {
-  width: 70%;
-  height: 16%;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 1.1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(#ff79da, #9356dc);
-  color: white;
-  border-radius: 2rem;
-  box-shadow: 3px 5px 6px #dad8d8;
-}
-.btn:hover {
-  background: linear-gradient(rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
-  box-shadow: 3px 5px 6px #b5b1b1;
-}
-@media screen and (min-width: 700px) {
-  .btn {
-    width: 50%;
-    height: 18%;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .btn {
-    width: 37%;
-    height: 23%;
-  }
-}
-
-.heart {
-  width: 25%;
-  height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.heart:hover .far {
-  opacity: 0;
-  transition: all 1s linear;
-}
-.heart:hover .fas {
-  opacity: 1;
-  transition: all 1s linear;
-}
-
-.heart-menu {
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-@media screen and (min-width: 700px) {
-  .heart-menu {
-    margin-left: 3rem;
-  }
-}
-.heart-menu:hover .far {
-  opacity: 0;
-  transition: all 1s linear;
-}
-.heart-menu:hover .fas {
-  opacity: 1;
-  transition: all 1s linear;
-}
-
-.heartempty {
-  font-size: 1.5rem;
-  color: black;
-  position: absolute;
-  opacity: 1;
-}
-
-.heartfull {
-  font-size: 1.5rem;
-  opacity: 0;
-  color: transparent;
-  background: linear-gradient(#9356dc, #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.loaderctr {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: disappear 0.8s 1.5s forwards;
-}
-
-.loader {
-  border: 0.4rem solid black;
-  border-radius: 0.8rem;
-  padding: 0.2rem;
-}
-.loader__bar {
-  background-color: #99e2d0;
-  border-radius: 0.9rem;
-  width: 20rem;
-  height: 1.2rem;
-  animation: progress 1.3s 200ms both;
-  transform-origin: left;
-}
-@media screen and (min-width: 700px) {
-  .loader__bar {
-    width: 25rem;
-    height: 1.7rem;
-  }
-}
-
-.container {
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  animation: container 0ms 2.3s both;
 }
 
 .location {
@@ -707,7 +707,7 @@
 }
 .menuctr__header {
   width: 100%;
-  height: 4%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -736,7 +736,7 @@
 }
 .menuctr__contenu {
   width: 100%;
-  height: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -754,7 +754,7 @@
 }
 .menuctr__contenu .plats {
   width: 100%;
-  height: 33%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -762,12 +762,14 @@
 }
 .menuctr__contenu .plats__header {
   width: 90%;
-  height: 4%;
+  height: auto;
   font-family: "Roboto";
   font-weight: 300;
   font-size: 1.1rem;
   position: relative;
   line-height: 0.8rem;
+  margin-bottom: 23px;
+  margin-top: 20px;
 }
 .menuctr__contenu .plats__header:after {
   content: "";
@@ -779,25 +781,21 @@
 }
 .menuctr__contenu .plats__choixbox {
   width: 100%;
-  height: 85%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
 .menuctr__contenu .plats__choixbox .plats__choix {
   display: flex;
   width: 95%;
-  height: 26%;
+  height: 70px;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px #d6d4d4;
   overflow: hidden;
-}
-@media screen and (min-width: 1100px) {
-  .menuctr__contenu .plats__choixbox .plats__choix {
-    height: 22%;
-  }
+  margin: 20px 0;
+  min-height: 70px;
 }
 .menuctr__contenu .plats__choixbox .plats__choix__main {
   min-width: 70%;
@@ -816,7 +814,6 @@
 @media screen and (min-width: 1100px) {
   .menuctr__contenu .plats__choixbox .plats__choix__main .main__texte {
     margin-left: 1.5rem;
-    flex-grow: 0;
   }
 }
 .menuctr__contenu .plats__choixbox .plats__choix__main .main__texte .nom-plat {
@@ -862,6 +859,7 @@
 @media screen and (min-width: 1100px) {
   .btn-menu {
     width: 33%;
+    margin-top: 6rem;
   }
 }
 
@@ -874,24 +872,20 @@
   }
 }
 
-#quatrechoix {
-  height: 22%;
-}
-
 .plats__choix--1 {
-  animation: menuslide 1s 200ms backwards ease-in;
+  animation: menuslide 1s 300ms both ease-in;
 }
 
 .plats__choix--2 {
-  animation: menuslide 1s 400ms backwards ease-in;
+  animation: menuslide 1s 400ms both ease-in;
 }
 
 .plats__choix--3 {
-  animation: menuslide 1s 600ms backwards ease-in;
+  animation: menuslide 1s 600ms both ease-in;
 }
 
 .plats__choix--4 {
-  animation: menuslide 1s 800ms backwards ease-in;
+  animation: menuslide 1s 800ms both ease-in;
 }
 
 .plats__choix:hover .plats__choix__checkbox {
@@ -910,7 +904,7 @@
   align-items: center;
   background-color: #99e2d0;
   border-radius: 0 1rem 1rem 0;
-  margin-right: -90px;
+  margin-right: -100px;
   transition: all 700ms linear;
 }
 @media screen and (min-width: 700px) {

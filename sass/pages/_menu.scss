@@ -56,7 +56,7 @@
     }
     
     &__header{
-        @include measure(100%,4%);
+        @include measure(100%,auto);
         @include flexBox(flex,row,space-around,center);
         margin-top:2.5rem;
         //tablet//
@@ -77,7 +77,7 @@
         }
     }
     &__contenu{
-        @include measure(100%,80%);
+        @include measure(100%,auto);
         @include flexJustify(flex,column,space-between);
         margin-top:1rem;
         //tablet//
@@ -89,13 +89,15 @@
              width:55%;
             }
         .plats{ 
-            @include measure(100%,33%);
+            @include measure(100%,auto);
             @include flexBox(flex,column,space-around,center);
             &__header{
-                @include measure(90%,4%);
+                @include measure(90%,auto);
                 @include fontStyle(family(normal),weight(regular),1.1rem);
                 position:relative;
                 line-height: 0.8rem;
+                margin-bottom:23px;
+                margin-top:20px;
             }
             &__header:after{
                 content:'';
@@ -104,23 +106,22 @@
                 top:1.2em;
                 width:2.8rem;
                 border-bottom:0.2rem solid $color-tertiary;
+                
             }
             &__choixbox{
-                @include measure(100%,85%);
-                @include flexBox(flex,column,space-around,center);
+                @include measure(100%,auto);
+                @include flexAlign(flex,column,center);
             
                 .plats__choix{
                     display:flex;
-                    @include measure(95%,26%);
+                    @include measure(95%,70px);
                     background-color:white;
                     border-radius: 1rem;
                     box-shadow:4px 4px 8px #d6d4d4;
                     overflow:hidden;
+                    margin:20px 0;
+                    min-height: 70px;
                     
-                    //laptop//
-                    @include breakpoint(laptop){
-                        height:22%;
-                    }
                 
                     &__main{
                         min-width:70%;
@@ -137,7 +138,6 @@
                             white-space:nowrap;
                             @include breakpoint(laptop){
                             margin-left:1.5rem;
-                            //flex-grow:0;
                             }
                             .nom-plat{
                                 text-overflow: ellipsis;
@@ -181,6 +181,7 @@
     //laptop//
     @include breakpoint(laptop){
         width:33%;
+        margin-top: 6rem;
    }
 }
 
@@ -192,23 +193,18 @@
     }
 }
 
-// menu2 avec 4 choix d'entrée //
-#quatrechoix{
-    height:22%;
-}
-
 // menuslide animation //
 .plats__choix--1{
-    animation:menuslide 1s 200ms backwards ease-in;
+    animation:menuslide 1s 300ms both ease-in;
 }
 .plats__choix--2{
-    animation:menuslide 1s 400ms backwards ease-in;
+    animation:menuslide 1s 400ms both ease-in;
 }
 .plats__choix--3{
-    animation:menuslide 1s 600ms backwards ease-in;
+    animation:menuslide 1s 600ms both ease-in;
 }
 .plats__choix--4{
-    animation:menuslide 1s 800ms backwards ease-in;
+    animation:menuslide 1s 800ms both ease-in;
 }
 
 // checkbox animation //
@@ -216,7 +212,7 @@
     &:hover {
         & .plats__choix__checkbox{
             margin-right:0px;
-            transition:all 700ms linear;
+            transition:all $checkbox-dur linear;
             & > .check{ 
             transform:rotate(360deg);
             }
@@ -229,8 +225,8 @@
     @include flexCenter;
     background-color: $color-tertiary;
     border-radius: 0 1rem 1rem 0;
-    margin-right:-90px;
-    transition: all 700ms linear;
+    margin-right:-100px;
+    transition: all $checkbox-dur linear;
 
      //tablet//
      @include breakpoint(tablet){
@@ -248,6 +244,6 @@
         color:$color-tertiary;
         border-radius:50%;
         background-color: white;
-        transition:transform 600ms 150ms linear;
+        transition:transform $check-dur $check-delay linear;
     }
 }
