@@ -22,8 +22,12 @@
 			</header>
 
 			<div class="location">
-				<i class="fas fa-map-marker-alt"></i>
-				<p class="location__texte">Paris, Belleville</p>
+				<form method = "post" action="traitement.php">
+					<p class="location__search">
+						<label for="ville"><i class="fas fa-map-marker-alt"></i></label>
+						<input type="text" name="ville" class="no-outline" id="ville" placeholder="Paris, Belleville"/>
+					</p>
+				</form>
 			</div>
 
 			<!--top section-->

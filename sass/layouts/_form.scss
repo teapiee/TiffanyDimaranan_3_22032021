@@ -1,0 +1,35 @@
+.location{
+    @include measure(100%,55px);
+    @include flexCenter;
+    background-color:#ededed;
+    margin-top:0.2rem;
+}
+
+.fa-map-marker-alt{
+    font-size: 1.2rem;
+}
+
+#ville{ //input//
+    @include measure(180px,50px);
+    @include fontStyle(family(normal),weight(medium),1.1rem);
+    color:black;
+    text-align: center;
+    background-color:#ededed;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    cursor:pointer;
+
+     //tablet//
+     @include breakpoint(tablet){
+        font-size: 1.3rem;
+     }
+     //laptop//
+     @include breakpoint(laptop){
+        font-size: 1.4rem;
+     }
+}
+.no-outline:focus {
+    outline: none;
+  }

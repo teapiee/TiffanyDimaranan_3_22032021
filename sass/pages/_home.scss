@@ -1,22 +1,3 @@
-.location{
-    @include measure(100%,55px);
-    @include flexCenter;
-    @include fontStyle(family(normal),weight(medium),1rem);
-    background-color:#ededed;
-    margin-top:0.2rem;
-   
-    //tablet//
-    @include breakpoint(tablet){
-        font-size:1.2rem;
-    }
-    //laptop//
-    @include breakpoint(laptop){
-        font-size:1.3rem;
-    }
-    &__texte{
-        margin-left:1rem;
-    }
-}
 
 .intro{
     @include measure(100%, 330px);
